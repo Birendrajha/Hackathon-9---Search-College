@@ -1,5 +1,5 @@
 const { Schema, mongo } = require('mongoose');
-
+ const mongoose  = require('mongoose');
 const collegeSchema = new Schema({
     name: Schema.Types.String,
     state: Schema.Types.String,
@@ -10,4 +10,6 @@ const collegeSchema = new Schema({
     course: Schema.Types.String
 })
 
-exports.collegeSchema = collegeSchema;
+//exports.collegeSchema = collegeSchema;
+let collegeModel = mongoose.model('collegerecords', collegeSchema)
+module.exports = collegeModel;
